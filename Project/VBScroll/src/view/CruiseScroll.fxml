@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../application/cruise.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CruiseScrollController">
+   <children>
+      <ScrollPane prefHeight="400.0" prefWidth="600.0">
+         <content>
+            <GridPane prefHeight="1053.0" prefWidth="585.0">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.0" minWidth="-Infinity" prefWidth="0.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="30.0" minWidth="19.0" prefWidth="20.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="30.0" minWidth="10.0" prefWidth="20.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="30.0" minWidth="10.0" prefWidth="20.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="25.0" minHeight="-Infinity" prefHeight="25.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="20.0" minHeight="-Infinity" prefHeight="20.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="45.0" minHeight="10.0" prefHeight="45.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="60.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="20.0" minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="45.0" minHeight="10.0" prefHeight="45.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="80.0" minHeight="80.0" prefHeight="80.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="150.0" minHeight="150.0" prefHeight="150.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="10.0" minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="10.0" minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="100.0" minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="10.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="150.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="10.0" minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="20.0" minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label fx:id="title" alignment="CENTER" contentDisplay="TOP" prefHeight="48.0" prefWidth="360.0" text="Welcome Aboard" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.columnSpan="4">
+                     <GridPane.margin>
+                        <Insets top="2.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" prefHeight="14.0" prefWidth="188.0" text="Home City" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+                  <ComboBox fx:id="HomeCityCB" prefHeight="22.0" prefWidth="250.0" GridPane.columnIndex="2" GridPane.columnSpan="5" GridPane.rowIndex="3" />
+                  <ComboBox fx:id="VacationDestCB" onAction="#vacationDestMade" prefHeight="22.0" prefWidth="250.0" GridPane.columnIndex="5" GridPane.columnSpan="3" GridPane.rowIndex="3">
+                     <GridPane.margin>
+                        <Insets left="25.0" />
+                     </GridPane.margin></ComboBox>
+                  <Label alignment="CENTER" layoutX="30.0" layoutY="90.0" prefHeight="14.0" prefWidth="187.0" text="Vacation Destination" GridPane.columnIndex="6" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+                  <DatePicker fx:id="DepartureDate" prefHeight="22.0" prefWidth="186.0" promptText="Departure date" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="4" />
+                  <DatePicker fx:id="ReturnDate" prefHeight="22.0" prefWidth="186.0" promptText="Return Date" GridPane.columnIndex="6" GridPane.columnSpan="2" GridPane.rowIndex="4" />
+                  <Label alignment="CENTER" prefHeight="14.0" prefWidth="179.0" text="Hotel Options" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="5" />
+                  <ComboBox fx:id="HotelCB" onAction="#hotelChoiceMade" prefHeight="22.0" prefWidth="250.0" GridPane.columnIndex="2" GridPane.columnSpan="3" GridPane.rowIndex="6" />
+                  <ImageView fx:id="imageView" fitHeight="119.0" fitWidth="179.0" pickOnBounds="true" GridPane.columnIndex="6" GridPane.columnSpan="2" GridPane.rowIndex="6" GridPane.rowSpan="2" />
+                  <TextArea fx:id="hotelTextArea" prefHeight="183.0" prefWidth="339.0" GridPane.columnIndex="2" GridPane.columnSpan="6" GridPane.rowIndex="8" />
+ 				  <Label alignment="CENTER" prefHeight="21.0" prefWidth="368.0" text="Please select all packages you would like to add to your cruise" GridPane.columnIndex="3" GridPane.columnSpan="4" GridPane.rowIndex="10" />
+                  <CheckBox fx:id="op1CBx" mnemonicParsing="false" onAction="#updateButtonPressed" text="Internet Package" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="11" />
+                  <CheckBox fx:id="op2CBx" mnemonicParsing="false" onAction="#updateButtonPressed" text="Alchol Package" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="12" />
+                  <CheckBox fx:id="op3CBx" mnemonicParsing="false" onAction="#updateButtonPressed" text="Fine Diner Package" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="13" />
+                  <CheckBox fx:id="op4CBx" mnemonicParsing="false" onAction="#updateButtonPressed" text="Shore Excursion Package" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="14" />
+                  <CheckBox fx:id="op5CBx" mnemonicParsing="false" onAction="#updateButtonPressed" text="Spa Pass" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="15" />
+                  <CheckBox fx:id="op6CBx" mnemonicParsing="false" onAction="#updateButtonPressed" text="Oceanview Room Upgrade" GridPane.columnIndex="4" GridPane.columnSpan="2" GridPane.rowIndex="11" />
+                  <CheckBox fx:id="op7CBx" mnemonicParsing="false" onAction="#updateButtonPressed" text="Balcony Room Upgrade" GridPane.columnIndex="4" GridPane.columnSpan="2" GridPane.rowIndex="12" />
+                  <CheckBox fx:id="op8CBx" mnemonicParsing="false" onAction="#updateButtonPressed" text="Suite Upgrade" GridPane.columnIndex="4" GridPane.columnSpan="2" GridPane.rowIndex="13" />
+                  <CheckBox fx:id="op9CBx" mnemonicParsing="false" onAction="#updateButtonPressed" text="Fitness Package" GridPane.columnIndex="4" GridPane.columnSpan="2" GridPane.rowIndex="14" />
+                  <CheckBox fx:id="op10CBx" mnemonicParsing="false" onAction="#updateButtonPressed" text="Child Care Package" GridPane.columnIndex="4" GridPane.columnSpan="2" GridPane.rowIndex="15" />
+                  <Label alignment="CENTER" prefHeight="27.0" prefWidth="185.0" text="Summary of Trip" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="18" />
+                  <TextArea fx:id="Itenerary" prefHeight="100.0" prefWidth="359.0" GridPane.columnIndex="2" GridPane.columnSpan="4" GridPane.rowIndex="19" />
+                  <TextArea fx:id="Bill" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.columnSpan="4" GridPane.rowIndex="21" />
+                  <Button fx:id="ExitButton" mnemonicParsing="false" onAction="#lastButtonPressed" text="Exit" GridPane.columnIndex="7" GridPane.rowIndex="23" />
+                  <Button fx:id="FinalizeButton" mnemonicParsing="false" onAction="#finalizeButtonPressed" prefHeight="22.0" prefWidth="175.0" text="Finalize Trip" GridPane.columnIndex="4" GridPane.columnSpan="2" GridPane.rowIndex="16">
+                     <GridPane.margin>
+                        <Insets left="5.0" />
+                     </GridPane.margin>
+                  </Button>
+                  <Text fx:id="SumofActivities" strokeType="OUTSIDE" strokeWidth="0.0" text="\$0.00" textAlignment="RIGHT" wrappingWidth="88.33935546875" GridPane.columnIndex="7" GridPane.rowIndex="14" />
+                  <Label prefHeight="34.0" prefWidth="150.0" text=" Cost of Packages:" textAlignment="RIGHT" GridPane.columnIndex="6" GridPane.columnSpan="2" GridPane.rowIndex="13">
+                     <GridPane.margin>
+                        <Insets left="40.0" />
+                     </GridPane.margin>
+                     <padding>
+                        <Insets left="45.0" />
+                     </padding></Label>
+                  <Text fx:id="vacationDestError" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Please Select Vacation Destination" textAlignment="CENTER" visible="false" wrappingWidth="183.1669921875" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                  <Text fx:id="dateOOBerror" fill="#fc0303" strokeType="OUTSIDE" strokeWidth="0.0" text="Return Date Must Be After Departure Date" textAlignment="CENTER" visible="false" wrappingWidth="186.33935546875" GridPane.columnIndex="4" GridPane.rowIndex="4">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </Text>
+                  <Text fx:id="hotelError" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Please select hotel" textAlignment="CENTER" visible="false" wrappingWidth="183.56298828125" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+               </children>
+            </GridPane>
+         </content></ScrollPane>
+   </children>
+</AnchorPane>

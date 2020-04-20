@@ -1,0 +1,36 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+.root{
+	-fx-focus-color: black;
+	-fx-font: italic 12px "Arial";
+	-fx-text-fill: black; 
+}
+
+.scroll-pane > .viewport{
+	-fx-background-color:tan;
+}
+
+.scroll-pane{
+	-fx-background-color: black;
+}
+
+.button {
+	-fx-color: silver;
+	-fx-text-fill: black; 
+	-fx-font:  italic 14px "Arial";
+    -fx-effect: dropshadow( one-pass-box , white , 8 , 0.0 , 2 , 0 );
+    -fx-border-radius: 6px;
+}
+
+.label {
+	-fx-font: Bold italic 16px "Arial";
+	 	 -fx-effect: dropshadow( one-pass-box , white , 8 , 0.2 , 4 , 0 );
+}
+
+#title{
+	-fx-font: italic 44px "Arial";
+	 	 -fx-effect: dropshadow( one-pass-box , white , 8 , 0.2 , 4 , 0 );
+}
+
+.image-view {
+	 	 -fx-effect: dropshadow( one-pass-box , white , 8 , 0.2 , 4 , 0 );
+}

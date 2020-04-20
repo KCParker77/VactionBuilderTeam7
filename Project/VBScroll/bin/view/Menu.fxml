@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MenuController">
+	<children>
+		<Label layoutX="152.0" layoutY="28.0" text="Vacation Builder">
+			<font>
+				<Font name="Bodoni MT Italic" size="41.0" />
+			</font>
+		</Label>
+		<Button fx:id="next" layoutX="276.0" layoutY="346.0" mnemonicParsing="false" onAction="#nextButtonPressed" text="Next" />
+      <HBox layoutX="11.0" layoutY="155.0" prefHeight="51.0" prefWidth="579.0" spacing="5.0">
+         <children>
+      		<RadioButton fx:id="Beach_RadioButton" contentDisplay="TOP" mnemonicParsing="false" text="Beach" userData="Beach">
+      			<toggleGroup>
+      				<ToggleGroup fx:id="VacationSelection" />
+      			</toggleGroup>
+               <graphic>
+                  <ImageView fitHeight="85.0" fitWidth="85.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@/pictures/beach.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+      		</RadioButton>
+      		<RadioButton fx:id="Camping_RadioButton" contentDisplay="TOP" mnemonicParsing="false" text="Camping" toggleGroup="$VacationSelection" userData="Camping">
+               <graphic>
+                  <ImageView fitHeight="85.0" fitWidth="85.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@/pictures/camping.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic></RadioButton>
+      		<RadioButton fx:id="City_RadioButton" contentDisplay="TOP" mnemonicParsing="false" text="City" toggleGroup="$VacationSelection" userData="City">
+               <graphic>
+                  <ImageView fitHeight="85.0" fitWidth="85.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@/pictures/city.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic></RadioButton>
+      		<RadioButton fx:id="Cruise_RadioButton" contentDisplay="TOP" mnemonicParsing="false" text="Cruise" toggleGroup="$VacationSelection" userData="Cruise">
+               <graphic>
+                  <ImageView fitHeight="85.0" fitWidth="85.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@/pictures/cruise.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic></RadioButton>
+      		<RadioButton fx:id="Snow_RadioButton" contentDisplay="TOP" mnemonicParsing="false" text="Snow" toggleGroup="$VacationSelection" userData="Snow">
+               <graphic>
+                  <ImageView fitHeight="85.0" fitWidth="85.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@/pictures/snow.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic></RadioButton>
+         </children>
+         <padding>
+            <Insets left="5.0" top="5.0" />
+         </padding>
+      </HBox>
+	</children>
+</AnchorPane>
